@@ -67,19 +67,53 @@ Creating producer/publisher event-driven architecture with micro-service single-
 ```
   kafka-server-start.bat server.properties
 ```
+###### Note:
+- Zookeeper server default port is 2181.
+- Kafka server default port is 9092.
+- Zookeeper must be started before kafka server.
+- when you are using linux/mac use .sh files for windows user use .bat files.
 
-## Note:
- ### zookeeper must be started before kafka server.
- ### when you are using linux/mac use .sh files for windows user use .bat files.
+# Kafka Producer
+- Will have the serializer property.
+- The one that will be using
+```
+KafkaTemplate.send()
+```
+- The one that will create the topic.
+- The one that will be publishing/producing the message/data to topic.
 
+# Kafka Consumer
+- Will have the deserializer property.
+- The one that will be using
+```
+@KafkaListener(topics={topicName}, groupId={groupId})
+```
+- The one that will subcribe to topic.
+- The one that will have the group-id that acts as unique identifier of consumer.
+
+###### Note:
+- When dealing with serializing and deserializing for easy method make the field names the same. If field name are not the same use
+
+```
+@JsonProperty("producerObjectFieldName")
+private Datatype consumerFieldName;
+```
 
 # What is KafkaTemplate 
  - KafkaTemplate is used to help your application to connect in kafka server and provides abstraction to Producer API of Kafka. Just like you use mysql-driver to connect in MySQL database. KafkaTemplate is provided by spring and usually be seen in producer applications to help create a event or send message/data in topic.
 
+# What is @KafkaListener
+- Used to easily subscribe to kafka topic created by producer. Method annotated with this will automatically when producer create a event or send a message/data to specified topic.
 
+# [kafka-consumer](https://github.com/Elleined/kafka-consumer)
  
-# Usefull links for debugging
+# Usefull links
  - installation https://youtu.be/EUzH9khPYgs
  - WMIC not recognize https://www.itechtics.com/wmic-is-not-recognized-as-an-internal-or-external-command/?expand_article=1
  - Kafka server not starting and not returning anything https://stackoverflow.com/questions/45524750/kafka-server-not-returning-anything
  - Serialization and Deserializatiom issue https://stackoverflow.com/questions/70206790/how-to-map-types-using-properties-file-in-kafka
+# Other github repo reference credits to
+- https://github.com/RameshMF/springboot-kafka-course
+# Yt videos
+- https://www.youtube.com/live/VInk1_9vvCY?feature=share
+- https://youtube.com/playlist?list=PLGRDMO4rOGcNLwoack4ZiTyewUcF6y6BU
