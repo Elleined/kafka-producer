@@ -15,7 +15,7 @@ Creating producer/publisher event-driven architecture with micro-service single-
  - Producer and Publisher are the same. sender of the event or message.
  - Consumer and Subscriber are the same. receiver of the event or message.
  - Event is some action on your application that are triggered like productSave and productDeleted etc... you get the point.
- - Topic, Channel, and Bucket are all the same. This is where the messsages/data suppose to go you know, like this is where the message will travel just like the radio frequency where their information is travelling for us to hear it.
+ - Topic, Channel, and Bucket are all the same. This is where the messsages/data suppose to go.
 
 # What is event-driven architecture(EDA)
  - In my own understanding based on my research. Event driven architecture is used in distributed systems like microservices architecture to effectively distribute the data across different microservices. Achieving data consistency, loose coupling, single point of truth, and real time communications.
@@ -46,8 +46,8 @@ Creating producer/publisher event-driven architecture with micro-service single-
 # Kafka installation
  - Before starting these intallation process if some unexpected happen I provided some usefull links for debugging that you might encounter when setting this up. Make sure to check it.
  - Download the latest stable version of kafka binary download.
- - Extract the kafkaX.XX.X.XX.zip you just downloaded. // X represent the version
- - Rename the kafkaX.XX.X.XX folder extracted to kafka.
+ - Extract the kafkaX.XX.X.XX.zip. // X represent the version
+ - Rename the kafkaX.XX.X.XX to kafka.
  - Move the folder to C://kafka.
  - Change zookeeper.properties property that located in kafka/config/zookeeper.properties
 ```
@@ -103,7 +103,7 @@ private Datatype consumerFieldName;
  - KafkaTemplate is used to help your application to connect in kafka server and provides abstraction to Producer API of Kafka. Just like you use mysql-driver to connect in MySQL database. KafkaTemplate is provided by spring and usually be seen in producer applications to help create a event or send message/data in topic.
 
 # What is @KafkaListener
-- Used to easily subscribe to kafka topic created by producer. Method annotated with this will automatically when producer create a event or send a message/data to specified topic.
+- Used to easily subscribe to kafka topic created by producer. Method annotated with this will automatically executed when producer create a event or send a message/data to specified topic.
 
 # [kafka-consumer](https://github.com/Elleined/kafka-consumer)
  
