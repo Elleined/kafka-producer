@@ -108,7 +108,9 @@ private Datatype consumerFieldName;
 # [kafka-consumer](https://github.com/Elleined/kafka-consumer)
  
 # Usefull links
- - installation https://youtu.be/EUzH9khPYgs
+ - Detailed explanation of Event-driven
+ https://www.youtube.com/watch?v=X-JWP7E1xPc
+ - Installation https://youtu.be/EUzH9khPYgs
  - WMIC not recognize https://www.itechtics.com/wmic-is-not-recognized-as-an-internal-or-external-command/?expand_article=1
  - Kafka server not starting and not returning anything https://stackoverflow.com/questions/45524750/kafka-server-not-returning-anything
  - Serialization and Deserializatiom issue https://stackoverflow.com/questions/70206790/how-to-map-types-using-properties-file-in-kafka
